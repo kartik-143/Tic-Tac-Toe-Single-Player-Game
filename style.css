@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
+  font-family: 'Orbitron', sans-serif;
+  color: #00fff7;
+  letter-spacing: 1px;
+}
+
+#gameContainer {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 25px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+  border: 2px solid #00fff7;
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  margin-bottom: 15px;
+  font-size: 2.2rem;
+  color: #00e6ff;
+  text-shadow: 0 0 10px #00e6ff, 0 0 20px #00e6ff;
+}
+
+#cellContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 110px);
+  gap: 10px;
+  margin: 25px auto;
+}
+
+.cell {
+  width: 110px;
+  height: 110px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #00fff7;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s ease;
+  color: #fff;
+  text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+}
+
+.cell:hover {
+  background: rgba(0, 255, 247, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00fff7;
+}
+
+#statusText {
+  font-size: 1.4rem;
+  margin-top: 15px;
+  text-shadow: 0 0 10px #00fff7;
+}
+
+#restartBtn {
+  margin-top: 25px;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  font-family: 'Orbitron', sans-serif;
+  border: 2px solid #00fff7;
+  border-radius: 10px;
+  background: transparent;
+  color: #00fff7;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#restartBtn:hover {
+  background: #00fff7;
+  color: #000;
+  box-shadow: 0 0 20px #00fff7;
+  transform: scale(1.05);
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px #00fff7; }
+  to { box-shadow: 0 0 25px #00fff7; }
+}
